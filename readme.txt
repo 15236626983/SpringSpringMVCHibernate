@@ -1,0 +1,12 @@
+Spring整合SpringMVC和Hibernate步骤：
+1、添加jar包
+2、添加Hibernate所需的配置文件和log4j的配置文件
+    1）在Hibernate配置文件中不需要再配置数据源；
+    2）需要通过log4j来显示Hibernate的sql语句；
+3、编写实体类，并添加相应注解
+4、添加Spring的配置文件applicationContext.xml文件
+    1）配置自动扫描；
+    2）配置数据源；
+    3）配置Hibernate所需的SqlSessionFactory，并在其中配置生成数据库表的实体类的包路径；
+    4）配置事务管理，支持声明式事务
+5、添加SpringMVC的配置文件springmvc.xml
